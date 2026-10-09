@@ -1,0 +1,12 @@
+{
+  "app": "era-v5-s14-moe-upcycle",
+  "cost_by_resource_usd": {
+    "A10G": 2.8551,
+    "Memory": 0.0567,
+    "CPU": 0.2018,
+    "L40S": 0.0336
+  },
+  "total_usd": 3.1472,
+  "n_app_runs": 16,
+  "source": "modal billing report --for today --show-resources --json (per-app rows for this app only)"
+}

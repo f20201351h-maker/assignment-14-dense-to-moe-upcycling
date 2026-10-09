@@ -1,0 +1,78 @@
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+✓ Initialized. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-QULGRwlKL7TPXrVdjr8VRg
+✓ Created objects.
+├── ✓ Uploaded .\modal_app.py
+├── ✓ Uploaded .\src
+├── ✓ Created Function prep_data.
+├── ✓ Created Function bench_a10g.
+├── ✓ Created Function bench_l40s.
+└── ✓ Created Function train.
+gpu: NVIDIA A10G torch: 2.14.0+cu130
+{"type": "event", "step": 6100, "event": "config", "tag": "stage2_moe", "args": {"stage": 2, "arm": "moe", "data_dir": "/vol/data", "run_dir": "/vol/runs/stage2_moe", "stage1_ckpt": "/vol/runs/stage1/stage1_final.pt", "s1_steps": 6100, "s2_steps": 6100, "batch": 128, "peak_lr": 0.001, "min_lr_frac": 0.1, "warmup": 200, "wd": 0.1, "beta2": 0.95, "clip": 1.0, "seed": 1337, "convert_seed": 2026, "eva
+{"type": "event", "step": 6100, "event": "converted", "convert_seed": 2026, "params_dense": {"embedding (tied head)": 3145728, "attention": 4718592, "norms": 6528, "ffn": 9437184, "total": 17308032, "active_per_token": 17308032}, "params_moe": {"embedding (tied head)": 3145728, "attention": 4718592, "norms": 6528, "shared experts": 4718592, "routed experts": 37748736, "routers": 49152, "total": 50
+{"type": "event", "step": 6100, "event": "step0_val", "val": {"dense_checkpoint": 1.6227439567446709, "upcycled_moe": 1.7496065497398376, "moe_random_routed_experts": 3.913178250193596, "moe_random_all_experts": 11.00759768486023, "fully_random_moe": 9.069488644599915, "uniform_baseline_ln_vocab": 9.010913347279288}}
+{"type": "eval", "step": 6100, "tokens": 199884800, "val_loss": 1.7496065497398376, "tag": "stage2_moe"}
+{"type": "eval", "step": 6125, "tokens": 200704000, "val_loss": 1.6895149573683739, "tag": "stage2_moe"}
+{"type": "eval", "step": 6150, "tokens": 201523200, "val_loss": 1.678025722503662, "tag": "stage2_moe"}
+{"type": "eval", "step": 6175, "tokens": 202342400, "val_loss": 1.6713832095265388, "tag": "stage2_moe"}
+{"type": "eval", "step": 6200, "tokens": 203161600, "val_loss": 1.667900137603283, "tag": "stage2_moe"}
+{"type": "eval", "step": 6225, "tokens": 203980800, "val_loss": 1.6666116267442703, "tag": "stage2_moe"}
+{"type": "eval", "step": 6250, "tokens": 204800000, "val_loss": 1.66532813757658, "tag": "stage2_moe"}
+{"type": "eval", "step": 6275, "tokens": 205619200, "val_loss": 1.6615732237696648, "tag": "stage2_moe"}
+{"type": "eval", "step": 6300, "tokens": 206438400, "val_loss": 1.659128613770008, "tag": "stage2_moe"}
+{"type": "eval", "step": 6325, "tokens": 207257600, "val_loss": 1.6568422615528107, "tag": "stage2_moe"}
+{"type": "eval", "step": 6350, "tokens": 208076800, "val_loss": 1.6545952185988426, "tag": "stage2_moe"}
+{"type": "eval", "step": 6375, "tokens": 208896000, "val_loss": 1.6514896303415298, "tag": "stage2_moe"}
+{"type": "eval", "step": 6400, "tokens": 209715200, "val_loss": 1.6511173024773598, "tag": "stage2_moe"}
+{"type": "eval", "step": 6425, "tokens": 210534400, "val_loss": 1.6500413492321968, "tag": "stage2_moe"}
+{"type": "eval", "step": 6450, "tokens": 211353600, "val_loss": 1.6486237868666649, "tag": "stage2_moe"}
+{"type": "eval", "step": 6475, "tokens": 212172800, "val_loss": 1.6463346630334854, "tag": "stage2_moe"}
+{"type": "perf", "step": 6500, "tok_per_s": 86118.98104933453, "sec_per_step": 0.38049683822000135, "peak_mem_gib": 10.921769618988037, "window": 50}
+{"type": "eval", "step": 6500, "tokens": 212992000, "val_loss": 1.646028809249401, "tag": "stage2_moe"}
+{"type": "eval", "step": 6525, "tokens": 213811200, "val_loss": 1.6452900245785713, "tag": "stage2_moe"}
+{"type": "eval", "step": 6550, "tokens": 214630400, "val_loss": 1.6411428302526474, "tag": "stage2_moe"}
+{"type": "eval", "step": 6575, "tokens": 215449600, "val_loss": 1.6413854137063026, "tag": "stage2_moe"}
+{"type": "eval", "step": 6600, "tokens": 216268800, "val_loss": 1.6375299990177155, "tag": "stage2_moe"}
+{"type": "eval", "step": 6750, "tokens": 221184000, "val_loss": 1.6299143135547638, "tag": "stage2_moe"}
+{"type": "perf", "step": 7000, "tok_per_s": 82200.53124397105, "sec_per_step": 0.39863489328000357, "peak_mem_gib": 10.921769618988037, "window": 50}
+{"type": "eval", "step": 7000, "tokens": 229376000, "val_loss": 1.6190615817904472, "tag": "stage2_moe"}
+{"type": "eval", "step": 7250, "tokens": 237568000, "val_loss": 1.6076461672782898, "tag": "stage2_moe"}
+{"type": "perf", "step": 7500, "tok_per_s": 84771.54594490537, "sec_per_step": 0.3865447967800014, "peak_mem_gib": 10.927720069885254, "window": 50}
+{"type": "eval", "step": 7500, "tokens": 245760000, "val_loss": 1.596934698522091, "tag": "stage2_moe"}
+{"type": "eval", "step": 7750, "tokens": 253952000, "val_loss": 1.5894964039325714, "tag": "stage2_moe"}
+{"type": "perf", "step": 8000, "tok_per_s": 82185.0040415468, "sec_per_step": 0.39871020731999807, "peak_mem_gib": 10.927720069885254, "window": 50}
+{"type": "eval", "step": 8000, "tokens": 262144000, "val_loss": 1.5799740329384804, "tag": "stage2_moe"}
+{"type": "eval", "step": 8250, "tokens": 270336000, "val_loss": 1.5710571557283401, "tag": "stage2_moe"}
+{"type": "perf", "step": 8500, "tok_per_s": 86299.80821163447, "sec_per_step": 0.3796995691999973, "peak_mem_gib": 10.927720069885254, "window": 50}
+{"type": "eval", "step": 8500, "tokens": 278528000, "val_loss": 1.5625434145331383, "tag": "stage2_moe"}
+{"type": "eval", "step": 8750, "tokens": 286720000, "val_loss": 1.5558048114180565, "tag": "stage2_moe"}
+{"type": "perf", "step": 9000, "tok_per_s": 86345.05669294526, "sec_per_step": 0.3795005904799791, "peak_mem_gib": 10.927720069885254, "window": 50}
+{"type": "eval", "step": 9000, "tokens": 294912000, "val_loss": 1.5482993125915527, "tag": "stage2_moe"}
+{"type": "eval", "step": 9250, "tokens": 303104000, "val_loss": 1.5409429892897606, "tag": "stage2_moe"}
+{"type": "perf", "step": 9500, "tok_per_s": 86301.63503090078, "sec_per_step": 0.37969153177998577, "peak_mem_gib": 10.929282665252686, "window": 50}
+{"type": "eval", "step": 9500, "tokens": 311296000, "val_loss": 1.534156247973442, "tag": "stage2_moe"}
+{"type": "eval", "step": 9750, "tokens": 319488000, "val_loss": 1.5278581604361534, "tag": "stage2_moe"}
+{"type": "perf", "step": 10000, "tok_per_s": 86335.25426484187, "sec_per_step": 0.3795436786400251, "peak_mem_gib": 10.930817604064941, "window": 50}
+{"type": "eval", "step": 10000, "tokens": 327680000, "val_loss": 1.5228471159934998, "tag": "stage2_moe"}
+{"type": "eval", "step": 10250, "tokens": 335872000, "val_loss": 1.5181818157434464, "tag": "stage2_moe"}
+{"type": "perf", "step": 10500, "tok_per_s": 86333.65853841297, "sec_per_step": 0.37955069383999673, "peak_mem_gib": 10.930817604064941, "window": 50}
+{"type": "eval", "step": 10500, "tokens": 344064000, "val_loss": 1.5126949697732925, "tag": "stage2_moe"}
+{"type": "eval", "step": 10750, "tokens": 352256000, "val_loss": 1.5087135881185532, "tag": "stage2_moe"}
+{"type": "perf", "step": 11000, "tok_per_s": 86326.03983979963, "sec_per_step": 0.37958419105995744, "peak_mem_gib": 10.930817604064941, "window": 50}
+{"type": "eval", "step": 11000, "tokens": 360448000, "val_loss": 1.505217269062996, "tag": "stage2_moe"}
+{"type": "eval", "step": 11250, "tokens": 368640000, "val_loss": 1.501837819814682, "tag": "stage2_moe"}
+{"type": "perf", "step": 11500, "tok_per_s": 86343.47251679309, "sec_per_step": 0.37950755331999064, "peak_mem_gib": 10.930817604064941, "window": 50}
+{"type": "eval", "step": 11500, "tokens": 376832000, "val_loss": 1.4994112253189087, "tag": "stage2_moe"}
+{"type": "eval", "step": 11750, "tokens": 385024000, "val_loss": 1.4964680820703506, "tag": "stage2_moe"}
+{"type": "perf", "step": 12000, "tok_per_s": 86265.96870780458, "sec_per_step": 0.37984851373998935, "peak_mem_gib": 10.931614398956299, "window": 50}
+{"type": "eval", "step": 12000, "tokens": 393216000, "val_loss": 1.4939835965633392, "tag": "stage2_moe"}
+{"type": "eval", "step": 12200, "tokens": 399769600, "val_loss": 1.4925341755151749, "tag": "stage2_moe"}
+{"type": "sample", "step": 12200, "seed": 0, "text": "Once upon a time, there was a little boy named Timmy. Timmy loved to play outside with his friends. One day, Timmy and his friends decided to explore a cave. They wanted to see what was inside.\n\nAs they walked around the cave, they came across a deep hole. Timmy's friends were afraid of going in there. But Timmy was brave and decided to go in
+{"type": "sample", "step": 12200, "seed": 1, "text": "Once upon a time, there was a little girl named Lily. She loved to play by the river with her friends. One day, they decided to sail their boats to the other side of the river. Lily's friend, Timmy, was very brave and always kept her safe.\n\nAs they sailed their boats, Lily noticed that she noticed that her friend's hair was getting stuck. She
+{"type": "event", "step": 12200, "event": "done", "final_ckpt": "/vol/runs/stage2_moe/stage2_moe_final.pt"}
+✓ App completed. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-QULGRwlKL7TPXrVdjr8VRg

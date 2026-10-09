@@ -1,0 +1,74 @@
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+✓ Initialized. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-hdx5qbrayZ6heFpn8P8Lbk
+✓ Created objects.
+├── ✓ Uploaded .\modal_app.py
+├── ✓ Uploaded .\src
+├── ✓ Created Function prep_data.
+├── ✓ Created Function bench_a10g.
+├── ✓ Created Function bench_l40s.
+├── ✓ Created Function train.
+├── ✓ Created Function overlap_check.
+├── ✓ Created Function build_clean_sets.
+└── ✓ Created Function clean_eval_gpu.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+[1AGenerating train split:   0%|          | 0/2119719 [00:00<?, ? examples/s]
+[1AGenerating train split:   1%|▏         | 29000/2119719 [00:00<00:07, 281960.87 examples/s]
+[1AGenerating train split:   3%|▎         | 65000/2119719 [00:00<00:06, 320950.35 examples/s]
+[1AGenerating train split:   5%|▍         | 102000/2119719 [00:00<00:06, 334987.99 examples/s]
+[1AGenerating train split:   7%|▋         | 140000/2119719 [00:00<00:05, 345258.72 examples/s]
+[1AGenerating train split:   8%|▊         | 175000/2119719 [00:00<00:05, 341023.41 examples/s]
+[1AGenerating train split:  11%|█         | 223000/2119719 [00:00<00:05, 326549.33 examples/s]
+[1AGenerating train split:  12%|█▏        | 256000/2119719 [00:00<00:05, 322377.51 examples/s]
+[1AGenerating train split:  14%|█▎        | 289000/2119719 [00:00<00:05, 321255.12 examples/s]
+[1AGenerating train split:  16%|█▌        | 331000/2119719 [00:00<00:05, 346045.39 examples/s]
+[1AGenerating train split:  18%|█▊        | 376000/2119719 [00:01<00:05, 324491.16 examples/s]
+[1AGenerating train split:  20%|█▉        | 423000/2119719 [00:01<00:04, 359358.42 examples/s]
+[1AGenerating train split:  22%|██▏       | 469000/2119719 [00:01<00:04, 382990.45 examples/s]
+[1AGenerating train split:  25%|██▍       | 528000/2119719 [00:01<00:04, 385783.93 examples/s]
+[1AGenerating train split:  28%|██▊       | 584930/2119719 [00:01<00:04, 379438.26 examples/s]
+[1AGenerating train split:  30%|███       | 635930/2119719 [00:01<00:04, 362970.44 examples/s]
+[1AGenerating train split:  32%|███▏      | 672930/2119719 [00:01<00:04, 357959.11 examples/s]
+[1AGenerating train split:  34%|███▍      | 718930/2119719 [00:02<00:03, 380084.37 examples/s]
+[1AGenerating train split:  37%|███▋      | 776930/2119719 [00:02<00:03, 376479.56 examples/s]
+[1AGenerating train split:  39%|███▉      | 822930/2119719 [00:02<00:03, 394421.80 examples/s]
+[1AGenerating train split:  41%|████▏     | 874930/2119719 [00:02<00:02, 424701.90 examples/s]
+[1AGenerating train split:  44%|████▍     | 931930/2119719 [00:02<00:02, 406307.95 examples/s]
+[1AGenerating train split:  46%|████▌     | 977930/2119719 [00:02<00:02, 415874.22 examples/s]
+[1AGenerating train split:  48%|████▊     | 1021930/2119719 [00:02<00:02, 421380.50 examples/s]
+[1AGenerating train split:  51%|█████     | 1085860/2119719 [00:02<00:02, 418809.20 examples/s]
+[1AGenerating train split:  53%|█████▎    | 1129860/2119719 [00:02<00:02, 421392.52 examples/s]
+[1AGenerating train split:  56%|█████▌    | 1184860/2119719 [00:03<00:02, 397415.93 examples/s]
+[1AGenerating train split:  59%|█████▊    | 1240860/2119719 [00:03<00:02, 380225.45 examples/s]
+[1AGenerating train split:  61%|██████▏   | 1298860/2119719 [00:03<00:02, 378920.71 examples/s]
+[1AGenerating train split:  63%|██████▎   | 1340860/2119719 [00:03<00:02, 385661.92 examples/s]
+[1AGenerating train split:  66%|██████▌   | 1392860/2119719 [00:03<00:01, 367908.59 examples/s]
+[1AGenerating train split:  68%|██████▊   | 1445860/2119719 [00:03<00:01, 358003.81 examples/s]
+[1AGenerating train split:  70%|███████   | 1483860/2119719 [00:03<00:01, 357196.75 examples/s]
+[1AGenerating train split:  72%|███████▏  | 1523860/2119719 [00:04<00:01, 322513.99 examples/s]
+[1AGenerating train split:  74%|███████▍  | 1568860/2119719 [00:04<00:01, 311172.75 examples/s]
+[1AGenerating train split:  76%|███████▌  | 1600790/2119719 [00:04<00:01, 309331.22 examples/s]
+[1AGenerating train split:  77%|███████▋  | 1635790/2119719 [00:04<00:01, 316643.88 examples/s]
+[1AGenerating train split:  79%|███████▉  | 1669790/2119719 [00:04<00:01, 315991.42 examples/s]
+[1AGenerating train split:  80%|████████  | 1702790/2119719 [00:04<00:01, 314408.81 examples/s]
+[1AGenerating train split:  82%|████████▏ | 1735790/2119719 [00:04<00:01, 315057.08 examples/s]
+[1AGenerating train split:  84%|████████▍ | 1777790/2119719 [00:04<00:01, 340525.64 examples/s]
+[1AGenerating train split:  86%|████████▌ | 1821790/2119719 [00:05<00:00, 367257.35 examples/s]
+[1AGenerating train split:  88%|████████▊ | 1861790/2119719 [00:05<00:00, 373212.84 examples/s]
+[1AGenerating train split:  90%|█████████ | 1911790/2119719 [00:05<00:00, 353738.18 examples/s]
+[1AGenerating train split:  92%|█████████▏| 1948790/2119719 [00:05<00:00, 345667.05 examples/s]
+[1AGenerating train split:  94%|█████████▍| 1998790/2119719 [00:05<00:00, 337747.01 examples/s]
+[1AGenerating train split:  96%|█████████▌| 2033790/2119719 [00:05<00:00, 336099.79 examples/s]
+[1AGenerating train split:  98%|█████████▊| 2068790/2119719 [00:05<00:00, 336973.15 examples/s]
+[1AGenerating train split:  99%|█████████▉| 2105790/2119719 [00:05<00:00, 343399.10 examples/s]
+[1AGenerating train split: 100%|██████████| 2119719/2119719 [00:05<00:00, 358408.74 examples/s]
+
+[1AGenerating validation split:   0%|          | 0/21990 [00:00<?, ? examples/s]
+[1AGenerating validation split: 100%|██████████| 21990/21990 [00:00<00:00, 379424.34 examples/s]
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-hdx5qbrayZ6heFpn8P8Lbk

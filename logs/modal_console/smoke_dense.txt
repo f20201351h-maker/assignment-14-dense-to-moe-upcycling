@@ -1,0 +1,36 @@
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+✓ Initialized. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-5Hr4pXs8oFlwGgusXeXpEB
+✓ Created objects.
+├── ✓ Uploaded .\modal_app.py
+├── ✓ Uploaded .\src
+├── ✓ Created Function prep_data.
+├── ✓ Created Function bench_a10g.
+├── ✓ Created Function bench_l40s.
+└── ✓ Created Function train.
+gpu: NVIDIA A10G torch: 2.14.0+cu130
+{"type": "event", "step": 600, "event": "config", "tag": "stage2_dense", "args": {"stage": 2, "arm": "dense", "data_dir": "/vol/data", "run_dir": "/vol/runs/smoke_dense", "stage1_ckpt": "/vol/runs/lrsweep_1e-3/stage1_final.pt", "s1_steps": 600, "s2_steps": 11600, "batch": 128, "peak_lr": 0.001, "min_lr_frac": 0.1, "warmup": 200, "wd": 0.1, "beta2": 0.95, "clip": 1.0, "seed": 1337, "convert_seed": 
+{"type": "event", "step": 600, "event": "params", "params": {"embedding (tied head)": 3145728, "attention": 4718592, "norms": 6528, "ffn": 9437184, "total": 17308032, "active_per_token": 17308032}}
+{"type": "eval", "step": 600, "tokens": 19660800, "val_loss": 2.1657987162470818, "tag": "stage2_dense"}
+{"type": "eval", "step": 625, "tokens": 20480000, "val_loss": 2.1539301201701164, "tag": "stage2_dense"}
+{"type": "eval", "step": 650, "tokens": 21299200, "val_loss": 2.1386636197566986, "tag": "stage2_dense"}
+{"type": "eval", "step": 675, "tokens": 22118400, "val_loss": 2.121156431734562, "tag": "stage2_dense"}
+{"type": "eval", "step": 700, "tokens": 22937600, "val_loss": 2.10848980396986, "tag": "stage2_dense"}
+{"type": "eval", "step": 725, "tokens": 23756800, "val_loss": 2.095869332551956, "tag": "stage2_dense"}
+{"type": "eval", "step": 750, "tokens": 24576000, "val_loss": 2.082652524113655, "tag": "stage2_dense"}
+{"type": "eval", "step": 775, "tokens": 25395200, "val_loss": 2.0743142515420914, "tag": "stage2_dense"}
+{"type": "eval", "step": 800, "tokens": 26214400, "val_loss": 2.064306229352951, "tag": "stage2_dense"}
+{"type": "eval", "step": 825, "tokens": 27033600, "val_loss": 2.051905483007431, "tag": "stage2_dense"}
+{"type": "eval", "step": 850, "tokens": 27852800, "val_loss": 2.0407029315829277, "tag": "stage2_dense"}
+{"type": "eval", "step": 875, "tokens": 28672000, "val_loss": 2.0337534695863724, "tag": "stage2_dense"}
+{"type": "eval", "step": 900, "tokens": 29491200, "val_loss": 2.0220148786902428, "tag": "stage2_dense"}
+{"type": "eval", "step": 925, "tokens": 30310400, "val_loss": 2.017908811569214, "tag": "stage2_dense"}
+{"type": "eval", "step": 950, "tokens": 31129600, "val_loss": 2.010150231420994, "tag": "stage2_dense"}
+{"type": "eval", "step": 975, "tokens": 31948800, "val_loss": 1.997517965734005, "tag": "stage2_dense"}
+{"type": "perf", "step": 1000, "tok_per_s": 176012.51125119627, "sec_per_step": 0.18616858407999842, "peak_mem_gib": 8.010205745697021, "window": 50}
+{"type": "eval", "step": 1000, "tokens": 32768000, "val_loss": 1.9914706945419312, "tag": "stage2_dense"}
+✓ App completed. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-5Hr4pXs8oFlwGgusXeXpEB

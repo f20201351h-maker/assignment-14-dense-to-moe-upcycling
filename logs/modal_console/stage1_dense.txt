@@ -1,0 +1,68 @@
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+[modal-client] 2026-10-02T02:07:46+0530 Warning: Received Status.RESOURCE_EXHAUSTED
+App create rate limit exceeded. Please wait and retry.
+for /modal.client.ModalClient/AppCreate (c8fe99ef). Retrying...
+✓ Initialized. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-0N51jRDOjGIibiGk9Dd3RN
+✓ Created objects.
+├── ✓ Uploaded .\modal_app.py
+├── ✓ Uploaded .\src
+├── ✓ Created Function prep_data.
+├── ✓ Created Function bench_a10g.
+├── ✓ Created Function bench_l40s.
+└── ✓ Created Function train.
+gpu: NVIDIA A10G torch: 2.14.0+cu130
+{"type": "event", "step": 0, "event": "config", "tag": "stage1", "args": {"stage": 1, "arm": "dense", "data_dir": "/vol/data", "run_dir": "/vol/runs/stage1", "stage1_ckpt": "", "s1_steps": 6100, "s2_steps": 6100, "batch": 128, "peak_lr": 0.001, "min_lr_frac": 0.1, "warmup": 200, "wd": 0.1, "beta2": 0.95, "clip": 1.0, "seed": 1337, "convert_seed": 2026, "eval_every": 250, "dense_every": 25, "dense_
+{"type": "eval", "step": 0, "tokens": 0, "val_loss": 9.030526399612427, "tag": "stage1"}
+{"type": "eval", "step": 250, "tokens": 8192000, "val_loss": 2.698325827717781, "tag": "stage1"}
+{"type": "perf", "step": 500, "tok_per_s": 175620.579567025, "sec_per_step": 0.18658405569999956, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 500, "tokens": 16384000, "val_loss": 2.251503236591816, "tag": "stage1"}
+{"type": "eval", "step": 750, "tokens": 24576000, "val_loss": 2.082652524113655, "tag": "stage1"}
+{"type": "perf", "step": 1000, "tok_per_s": 175502.5819579064, "sec_per_step": 0.18670950384000207, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 1000, "tokens": 32768000, "val_loss": 1.9914706945419312, "tag": "stage1"}
+{"type": "eval", "step": 1250, "tokens": 40960000, "val_loss": 1.931400753557682, "tag": "stage1"}
+{"type": "perf", "step": 1500, "tok_per_s": 175727.47668089918, "sec_per_step": 0.18647055439999805, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 1500, "tokens": 49152000, "val_loss": 1.8895305767655373, "tag": "stage1"}
+{"type": "eval", "step": 1750, "tokens": 57344000, "val_loss": 1.8551309183239937, "tag": "stage1"}
+{"type": "perf", "step": 2000, "tok_per_s": 175617.01792650312, "sec_per_step": 0.18658783976000337, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 2000, "tokens": 65536000, "val_loss": 1.8285446986556053, "tag": "stage1"}
+{"type": "eval", "step": 2250, "tokens": 73728000, "val_loss": 1.802734911441803, "tag": "stage1"}
+{"type": "perf", "step": 2500, "tok_per_s": 175379.9690067562, "sec_per_step": 0.18684003757999107, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 2500, "tokens": 81920000, "val_loss": 1.7834088057279587, "tag": "stage1"}
+{"type": "eval", "step": 2750, "tokens": 90112000, "val_loss": 1.765104241669178, "tag": "stage1"}
+{"type": "perf", "step": 3000, "tok_per_s": 170348.37351665116, "sec_per_step": 0.192358748860006, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 3000, "tokens": 98304000, "val_loss": 1.7533800452947617, "tag": "stage1"}
+{"type": "eval", "step": 3250, "tokens": 106496000, "val_loss": 1.7356916218996048, "tag": "stage1"}
+{"type": "perf", "step": 3500, "tok_per_s": 175330.84064692954, "sec_per_step": 0.18689239086000953, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 3500, "tokens": 114688000, "val_loss": 1.7214445248246193, "tag": "stage1"}
+{"type": "eval", "step": 3750, "tokens": 122880000, "val_loss": 1.7111902683973312, "tag": "stage1"}
+{"type": "perf", "step": 4000, "tok_per_s": 175483.59943363184, "sec_per_step": 0.18672970069999564, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 4000, "tokens": 131072000, "val_loss": 1.7000161558389664, "tag": "stage1"}
+{"type": "eval", "step": 4250, "tokens": 139264000, "val_loss": 1.6896309033036232, "tag": "stage1"}
+{"type": "perf", "step": 4500, "tok_per_s": 175869.37323771365, "sec_per_step": 0.18632010449999825, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 4500, "tokens": 147456000, "val_loss": 1.679107591509819, "tag": "stage1"}
+{"type": "eval", "step": 4750, "tokens": 155648000, "val_loss": 1.667575642466545, "tag": "stage1"}
+{"type": "perf", "step": 5000, "tok_per_s": 175689.7641046813, "sec_per_step": 0.18651058112000102, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 5000, "tokens": 163840000, "val_loss": 1.6580211445689201, "tag": "stage1"}
+{"type": "eval", "step": 5250, "tokens": 172032000, "val_loss": 1.6489490643143654, "tag": "stage1"}
+{"type": "perf", "step": 5500, "tok_per_s": 175644.39500967978, "sec_per_step": 0.1865587569600166, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 5500, "tokens": 180224000, "val_loss": 1.6411292254924774, "tag": "stage1"}
+{"type": "eval", "step": 5750, "tokens": 188416000, "val_loss": 1.6330567672848701, "tag": "stage1"}
+{"type": "eval", "step": 5900, "tokens": 193331200, "val_loss": 1.6287180110812187, "tag": "stage1"}
+{"type": "eval", "step": 5925, "tokens": 194150400, "val_loss": 1.6269314661622047, "tag": "stage1"}
+{"type": "eval", "step": 5950, "tokens": 194969600, "val_loss": 1.6267606392502785, "tag": "stage1"}
+{"type": "eval", "step": 5975, "tokens": 195788800, "val_loss": 1.6246815919876099, "tag": "stage1"}
+{"type": "perf", "step": 6000, "tok_per_s": 175761.04517811816, "sec_per_step": 0.18643494049999845, "peak_mem_gib": 7.948719024658203, "window": 50}
+{"type": "eval", "step": 6000, "tokens": 196608000, "val_loss": 1.6236214712262154, "tag": "stage1"}
+{"type": "eval", "step": 6025, "tokens": 197427200, "val_loss": 1.6238601505756378, "tag": "stage1"}
+{"type": "eval", "step": 6050, "tokens": 198246400, "val_loss": 1.623567558825016, "tag": "stage1"}
+{"type": "eval", "step": 6075, "tokens": 199065600, "val_loss": 1.6222233846783638, "tag": "stage1"}
+{"type": "eval", "step": 6100, "tokens": 199884800, "val_loss": 1.6227439567446709, "tag": "stage1"}
+{"type": "sample", "step": 6100, "seed": 0, "text": "Once upon a time, there was a little boy named Timmy. Timmy loved to play with his toys, especially his toy car. One day, Timmy's little sister Sarah came into his room and wanted to play with the toy car. Timmy thought it was a silly idea to play with Sarah's car instead.\n\n\"Let's discuss what we should do with the toy car,\" said Sarah.\n\n\
+{"type": "sample", "step": 6100, "seed": 1, "text": "Once upon a time, there was a little girl named Lily. She loved to go fishing with her dad. One day, they went fishing in the desert. Lily's dad put a cast on her hook and cast it in the water. Lily was so happy to see the cast.\n\nBut then, the cast was too hot and she lost her balance. She fell into the water and got very wet. Her dad tried to
+{"type": "event", "step": 6100, "event": "done", "final_ckpt": "/vol/runs/stage1/stage1_final.pt"}
+✓ App completed. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-0N51jRDOjGIibiGk9Dd3RN

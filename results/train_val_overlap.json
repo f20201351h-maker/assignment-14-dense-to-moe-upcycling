@@ -1,0 +1,7 @@
+{
+  "train_unique_stories": 1799248,
+  "val_stories": 21990,
+  "val_stories_exactly_in_train": 6601,
+  "fixed_eval_stories": 2632,
+  "fixed_eval_stories_exactly_in_train": 850
+}

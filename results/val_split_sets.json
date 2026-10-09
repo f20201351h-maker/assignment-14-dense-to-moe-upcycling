@@ -1,0 +1,10 @@
+{
+  "clean": {
+    "stories": 2697,
+    "tokens_predicted": 524288
+  },
+  "dup": {
+    "stories": 2457,
+    "tokens_predicted": 524288
+  }
+}

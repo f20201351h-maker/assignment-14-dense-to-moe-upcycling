@@ -1,0 +1,52 @@
+[
+  {
+    "gpu": "NVIDIA A10",
+    "torch": "2.14.0+cu130",
+    "batch_tokens": 32768,
+    "dense": {
+      "tok_per_s": 189361,
+      "sec_per_step": 0.173,
+      "peak_mem_gib": 8.14
+    },
+    "moe": {
+      "tok_per_s": 90529,
+      "sec_per_step": 0.362,
+      "peak_mem_gib": 10.74
+    },
+    "dense_compiled": {
+      "tok_per_s": 243827,
+      "sec_per_step": 0.1344,
+      "peak_mem_gib": 7.45
+    },
+    "moe_compiled": {
+      "tok_per_s": 100953,
+      "sec_per_step": 0.3246,
+      "peak_mem_gib": 10.35
+    }
+  },
+  {
+    "gpu": "NVIDIA L40S",
+    "torch": "2.14.0+cu130",
+    "batch_tokens": 32768,
+    "dense": {
+      "tok_per_s": 403530,
+      "sec_per_step": 0.0812,
+      "peak_mem_gib": 8.14
+    },
+    "moe": {
+      "tok_per_s": 155511,
+      "sec_per_step": 0.2107,
+      "peak_mem_gib": 10.74
+    },
+    "dense_compiled": {
+      "tok_per_s": 468767,
+      "sec_per_step": 0.0699,
+      "peak_mem_gib": 7.45
+    },
+    "moe_compiled": {
+      "tok_per_s": 161816,
+      "sec_per_step": 0.2025,
+      "peak_mem_gib": 10.34
+    }
+  }
+]

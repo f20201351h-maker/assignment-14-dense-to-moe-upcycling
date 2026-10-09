@@ -1,0 +1,55 @@
+source: checkpoint ../ckpt/stage1_final.pt (step 6100)
+config: {"vocab_size": 8192, "n_layer": 8, "d_model": 384, "n_head": 6, "ctx": 256, "ffn_hidden": 1024, "shared_width": 512, "n_routed": 16, "routed_width": 256, "top_k": 2, "routed_scale": 2.0, "bias_gamma": 0.001, "router_init_std": 0.02, "init_std": 0.02}
+convert_seed: 2026
+
+[3] carried tensors bit-identical: 34/34 -> PASS
+    carried names (e.g.): ['tok.weight', 'blocks.0.n1.weight', 'blocks.0.n2.weight', 'blocks.0.attn.qkv.weight'] ... ['blocks.7.attn.proj.weight', 'nf.weight']
+    tensors that exist only in the MoE: ['ffn.route_bias', 'ffn.router.weight', 'ffn.shared.down.weight', 'ffn.shared.gate.weight', 'ffn.shared.up.weight', 'ffn.w_down', 'ffn.w_gate', 'ffn.w_up'] x 8 layers
+
+[2] neuron coverage per layer
+    layer 0: |A|=512 |union|=1024 A-neurons in routed experts=0 B-neuron multiplicity min/max=8/8 expert sizes=[256] all experts distinct=True pairs complementary=True -> PASS
+    layer 1: |A|=512 |union|=1024 A-neurons in routed experts=0 B-neuron multiplicity min/max=8/8 expert sizes=[256] all experts distinct=True pairs complementary=True -> PASS
+    layer 2: |A|=512 |union|=1024 A-neurons in routed experts=0 B-neuron multiplicity min/max=8/8 expert sizes=[256] all experts distinct=True pairs complementary=True -> PASS
+    layer 3: |A|=512 |union|=1024 A-neurons in routed experts=0 B-neuron multiplicity min/max=8/8 expert sizes=[256] all experts distinct=True pairs complementary=True -> PASS
+    layer 4: |A|=512 |union|=1024 A-neurons in routed experts=0 B-neuron multiplicity min/max=8/8 expert sizes=[256] all experts distinct=True pairs complementary=True -> PASS
+    layer 5: |A|=512 |union|=1024 A-neurons in routed experts=0 B-neuron multiplicity min/max=8/8 expert sizes=[256] all experts distinct=True pairs complementary=True -> PASS
+    layer 6: |A|=512 |union|=1024 A-neurons in routed experts=0 B-neuron multiplicity min/max=8/8 expert sizes=[256] all experts distinct=True pairs complementary=True -> PASS
+    layer 7: |A|=512 |union|=1024 A-neurons in routed experts=0 B-neuron multiplicity min/max=8/8 expert sizes=[256] all experts distinct=True pairs complementary=True -> PASS
+
+[1] expert == dense FFN restricted to its neuron set (float64, random inputs x ~ N(0,1), n=4096)
+    layer 0: max|shared - dense_A|=0.00e+00  max|expert_e - dense_e| (16 experts)=0.00e+00  max|shared+pair_p - dense| (8 pairs)=8.88e-15  (|dense out| max 1.31e+01)
+    layer 1: max|shared - dense_A|=0.00e+00  max|expert_e - dense_e| (16 experts)=0.00e+00  max|shared+pair_p - dense| (8 pairs)=1.42e-14  (|dense out| max 9.54e+00)
+    layer 2: max|shared - dense_A|=0.00e+00  max|expert_e - dense_e| (16 experts)=0.00e+00  max|shared+pair_p - dense| (8 pairs)=1.24e-14  (|dense out| max 1.43e+01)
+    layer 3: max|shared - dense_A|=0.00e+00  max|expert_e - dense_e| (16 experts)=0.00e+00  max|shared+pair_p - dense| (8 pairs)=9.33e-15  (|dense out| max 7.04e+00)
+    layer 4: max|shared - dense_A|=0.00e+00  max|expert_e - dense_e| (16 experts)=0.00e+00  max|shared+pair_p - dense| (8 pairs)=1.15e-14  (|dense out| max 8.31e+00)
+    layer 5: max|shared - dense_A|=0.00e+00  max|expert_e - dense_e| (16 experts)=0.00e+00  max|shared+pair_p - dense| (8 pairs)=8.88e-15  (|dense out| max 6.68e+00)
+    layer 6: max|shared - dense_A|=0.00e+00  max|expert_e - dense_e| (16 experts)=0.00e+00  max|shared+pair_p - dense| (8 pairs)=1.07e-14  (|dense out| max 1.14e+01)
+    layer 7: max|shared - dense_A|=0.00e+00  max|expert_e - dense_e| (16 experts)=0.00e+00  max|shared+pair_p - dense| (8 pairs)=1.07e-14  (|dense out| max 1.20e+01)
+    worst abs diff 1.42e-14 -> PASS (tolerance 1e-10 in float64)
+
+[1b] end-to-end: router zeroed, bias forces complementary pair p (weights 0.5/0.5, x2 scale) -> MoE logits vs dense logits (float64)
+    pair 0: max|logits_moe - logits_dense| = 2.84e-14
+    pair 1: max|logits_moe - logits_dense| = 2.66e-14
+    pair 2: max|logits_moe - logits_dense| = 3.02e-14
+    pair 3: max|logits_moe - logits_dense| = 3.02e-14
+    pair 4: max|logits_moe - logits_dense| = 2.66e-14
+    pair 5: max|logits_moe - logits_dense| = 2.84e-14
+    pair 6: max|logits_moe - logits_dense| = 2.84e-14
+    pair 7: max|logits_moe - logits_dense| = 2.84e-14
+    -> PASS
+
+[5] routing: exactly k experts executed per token; weights sum to 1; sparse dispatch == masked dense reference (float64)
+    layer 0: expert evaluations per token min/max=2/2, total=8192 (= 2 x 4096), selected experts distinct=True, max|sum(w)-1|=2.2e-16, max|sparse-ref|=0.0e+00 -> PASS
+    layer 1: expert evaluations per token min/max=2/2, total=8192 (= 2 x 4096), selected experts distinct=True, max|sum(w)-1|=2.2e-16, max|sparse-ref|=0.0e+00 -> PASS
+    (all 8 layers checked)
+
+[opt] AdamW state transfer (two dummy steps on the dense model, then convert)
+    carried/sliced moments match: [True, True, True, True, True, True] ; fresh state for 8 tensors (routers only: True) -> PASS
+
+[4] parameter accounting (counted from the real modules)
+    dense: embedding (tied head)=3,145,728, attention=4,718,592, norms=6,528, ffn=9,437,184, total=17,308,032, active_per_token=17,308,032
+    moe: embedding (tied head)=3,145,728, attention=4,718,592, norms=6,528, shared experts=4,718,592, routed experts=37,748,736, routers=49,152, total=50,387,328, active_per_token=17,357,184, route_bias buffers (not trained by gradient)=128
+    moe total / dense total = 2.911; moe active / dense = 1.0028
+    FFN width per layer: dense 1024; moe total 4608, active 1024
+
+ALL CHECKS: PASS

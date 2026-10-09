@@ -1,0 +1,27 @@
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+✓ Initialized. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-Qzjyx0suGgHW9DCNeIWyMW
+✓ Created objects.
+├── ✓ Uploaded .\modal_app.py
+├── ✓ Uploaded .\src
+├── ✓ Created Function prep_data.
+├── ✓ Created Function bench_a10g.
+├── ✓ Created Function bench_l40s.
+└── ✓ Created Function train.
+gpu: NVIDIA A10 torch: 2.14.0+cu130
+{"type": "event", "step": 1000, "event": "resumed", "from": "/vol/runs/smoke_moe/latest.pt"}
+{"type": "eval", "step": 1025, "tokens": 33587200, "val_loss": 1.9928123131394386, "tag": "stage2_moe"}
+{"type": "eval", "step": 1050, "tokens": 34406400, "val_loss": 1.9851722419261932, "tag": "stage2_moe"}
+{"type": "eval", "step": 1075, "tokens": 35225600, "val_loss": 1.9791148453950882, "tag": "stage2_moe"}
+{"type": "eval", "step": 1100, "tokens": 36044800, "val_loss": 1.973123736679554, "tag": "stage2_moe"}
+{"type": "eval", "step": 1250, "tokens": 40960000, "val_loss": 1.9333521053195, "tag": "stage2_moe"}
+{"type": "perf", "step": 1500, "tok_per_s": 89679.3583929406, "sec_per_step": 0.36539066054000047, "peak_mem_gib": 10.930227279663086, "window": 50}
+{"type": "eval", "step": 1500, "tokens": 49152000, "val_loss": 1.888587310910225, "tag": "stage2_moe"}
+{"type": "eval", "step": 1750, "tokens": 57344000, "val_loss": 1.8500092327594757, "tag": "stage2_moe"}
+{"type": "perf", "step": 2000, "tok_per_s": 89696.76757146632, "sec_per_step": 0.36531974214000457, "peak_mem_gib": 10.935261726379395, "window": 50}
+{"type": "eval", "step": 2000, "tokens": 65536000, "val_loss": 1.818454034626484, "tag": "stage2_moe"}
+✓ App completed. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-Qzjyx0suGgHW9DCNeIWyMW

@@ -1,0 +1,37 @@
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+✓ Initialized. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-v2MGUnyFxZVJuz7BvEzumW
+✓ Created objects.
+├── ✓ Uploaded .\modal_app.py
+├── ✓ Uploaded .\src
+├── ✓ Created Function prep_data.
+├── ✓ Created Function bench_a10g.
+├── ✓ Created Function bench_l40s.
+└── ✓ Created Function train.
+gpu: NVIDIA A10G torch: 2.14.0+cu130
+{"type": "event", "step": 600, "event": "config", "tag": "stage2_moe", "args": {"stage": 2, "arm": "moe", "data_dir": "/vol/data", "run_dir": "/vol/runs/smoke_moe", "stage1_ckpt": "/vol/runs/lrsweep_1e-3/stage1_final.pt", "s1_steps": 600, "s2_steps": 11600, "batch": 128, "peak_lr": 0.001, "min_lr_frac": 0.1, "warmup": 200, "wd": 0.1, "beta2": 0.95, "clip": 1.0, "seed": 1337, "convert_seed": 2026, 
+{"type": "event", "step": 600, "event": "converted", "convert_seed": 2026, "params_dense": {"embedding (tied head)": 3145728, "attention": 4718592, "norms": 6528, "ffn": 9437184, "total": 17308032, "active_per_token": 17308032}, "params_moe": {"embedding (tied head)": 3145728, "attention": 4718592, "norms": 6528, "shared experts": 4718592, "routed experts": 37748736, "routers": 49152, "total": 503
+{"type": "event", "step": 600, "event": "step0_val", "val": {"dense_checkpoint": 2.1657987162470818, "upcycled_moe": 2.2220375016331673, "moe_random_routed_experts": 2.8249453753232956, "moe_random_all_experts": 8.291752964258194, "fully_random_moe": 9.069488644599915, "uniform_baseline_ln_vocab": 9.010913347279288}}
+{"type": "eval", "step": 600, "tokens": 19660800, "val_loss": 2.2220375016331673, "tag": "stage2_moe"}
+{"type": "eval", "step": 625, "tokens": 20480000, "val_loss": 2.1785271540284157, "tag": "stage2_moe"}
+{"type": "eval", "step": 650, "tokens": 21299200, "val_loss": 2.1618010699748993, "tag": "stage2_moe"}
+{"type": "eval", "step": 675, "tokens": 22118400, "val_loss": 2.146655425429344, "tag": "stage2_moe"}
+{"type": "eval", "step": 700, "tokens": 22937600, "val_loss": 2.134861573576927, "tag": "stage2_moe"}
+{"type": "eval", "step": 725, "tokens": 23756800, "val_loss": 2.1214767917990685, "tag": "stage2_moe"}
+{"type": "eval", "step": 750, "tokens": 24576000, "val_loss": 2.109091006219387, "tag": "stage2_moe"}
+{"type": "eval", "step": 775, "tokens": 25395200, "val_loss": 2.0968336686491966, "tag": "stage2_moe"}
+{"type": "eval", "step": 800, "tokens": 26214400, "val_loss": 2.0866182297468185, "tag": "stage2_moe"}
+{"type": "eval", "step": 825, "tokens": 27033600, "val_loss": 2.072041243314743, "tag": "stage2_moe"}
+{"type": "eval", "step": 850, "tokens": 27852800, "val_loss": 2.0622009187936783, "tag": "stage2_moe"}
+{"type": "eval", "step": 875, "tokens": 28672000, "val_loss": 2.0523784831166267, "tag": "stage2_moe"}
+{"type": "eval", "step": 900, "tokens": 29491200, "val_loss": 2.038732625544071, "tag": "stage2_moe"}
+{"type": "eval", "step": 925, "tokens": 30310400, "val_loss": 2.033900775015354, "tag": "stage2_moe"}
+{"type": "eval", "step": 950, "tokens": 31129600, "val_loss": 2.0234973058104515, "tag": "stage2_moe"}
+{"type": "eval", "step": 975, "tokens": 31948800, "val_loss": 2.0129122883081436, "tag": "stage2_moe"}
+{"type": "perf", "step": 1000, "tok_per_s": 86257.64452300381, "sec_per_step": 0.37988517054, "peak_mem_gib": 10.940072059631348, "window": 50}
+{"type": "eval", "step": 1000, "tokens": 32768000, "val_loss": 2.0027548521757126, "tag": "stage2_moe"}
+✓ App completed. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-v2MGUnyFxZVJuz7BvEzumW

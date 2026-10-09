@@ -1,0 +1,455 @@
+{
+  "tokens_per_step": 32768,
+  "conversion_step": 6100,
+  "final_step": 12200,
+  "val_before_conversion_dense": 1.6227439567446709,
+  "val_end_dense_control": 1.5043428465723991,
+  "stage1_last_evals": [
+    [
+      5925,
+      1.6269
+    ],
+    [
+      5950,
+      1.6268
+    ],
+    [
+      5975,
+      1.6247
+    ],
+    [
+      6000,
+      1.6236
+    ],
+    [
+      6025,
+      1.6239
+    ],
+    [
+      6050,
+      1.6236
+    ],
+    [
+      6075,
+      1.6222
+    ],
+    [
+      6100,
+      1.6227
+    ]
+  ],
+  "moe_arms": {
+    "stage2_moe": {
+      "label": "upcycled MoE, bias balancing (as planned)",
+      "val_step0_after_conversion": 1.7496065497398376,
+      "conversion_jump": 0.12686259299516678,
+      "first_eval_at_or_below_pre_conversion": {
+        "step": 7000,
+        "steps_after_conversion": 900,
+        "tokens_after_conversion_M": 29.4912,
+        "val_loss": 1.6190615817904472,
+        "dense_control_val_same_step": 1.595680221915245
+      },
+      "val_end": 1.4925341755151749,
+      "step0_controls": {
+        "dense_checkpoint": 1.6227439567446709,
+        "upcycled_moe": 1.7496065497398376,
+        "moe_random_routed_experts": 3.913178250193596,
+        "moe_random_all_experts": 11.00759768486023,
+        "fully_random_moe": 9.069488644599915,
+        "uniform_baseline_ln_vocab": 9.010913347279288
+      },
+      "minus_dense_at_matched_evals": {
+        "6100": 0.1269,
+        "6200": 0.0492,
+        "6600": 0.0317,
+        "7000": 0.0234,
+        "8000": 0.0111,
+        "9000": 0.0026,
+        "10000": -0.0043,
+        "11000": -0.0082,
+        "12000": -0.0116,
+        "12200": -0.0118
+      },
+      "first_eval_below_dense_control": 9500,
+      "below_dense_control_from_step_onwards": 9500,
+      "end_below_pre_conversion": true,
+      "end_minus_pre_conversion": -0.130209781229496,
+      "end_minus_dense_control": -0.011808671057224274,
+      "routing_val_step0": [
+        {
+          "maxvio": 0.59429931640625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.032692909240722656,
+          "max_share": 0.09964370727539062,
+          "entropy": 2.7437161654233932,
+          "top1_weight": 0.5287108905613422
+        },
+        {
+          "maxvio": 0.7127685546875,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.023778915405273438,
+          "max_share": 0.10704803466796875,
+          "entropy": 2.745807781815529,
+          "top1_weight": 0.5281819216907024
+        },
+        {
+          "maxvio": 0.89556884765625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.024916648864746094,
+          "max_share": 0.11847305297851562,
+          "entropy": 2.737053006887436,
+          "top1_weight": 0.5324497185647488
+        },
+        {
+          "maxvio": 1.0036773681640625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.02817535400390625,
+          "max_share": 0.1252298355102539,
+          "entropy": 2.7275934368371964,
+          "top1_weight": 0.5369578115642071
+        },
+        {
+          "maxvio": 0.83563232421875,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.03055095672607422,
+          "max_share": 0.11472702026367188,
+          "entropy": 2.7178770154714584,
+          "top1_weight": 0.5399608835577965
+        },
+        {
+          "maxvio": 1.513031005859375,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.02611255645751953,
+          "max_share": 0.15706443786621094,
+          "entropy": 2.708762675523758,
+          "top1_weight": 0.54386081174016
+        },
+        {
+          "maxvio": 0.6251373291015625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.041077613830566406,
+          "max_share": 0.10157108306884766,
+          "entropy": 2.6994832307100296,
+          "top1_weight": 0.5467626936733723
+        },
+        {
+          "maxvio": 0.4432525634765625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.04179668426513672,
+          "max_share": 0.09020328521728516,
+          "entropy": 2.698022961616516,
+          "top1_weight": 0.5471702739596367
+        }
+      ],
+      "routing_val_end": [
+        {
+          "maxvio": 0.065704345703125,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05800819396972656,
+          "max_share": 0.06660652160644531,
+          "entropy": 2.6727820336818695,
+          "top1_weight": 0.5840413309633732
+        },
+        {
+          "maxvio": 0.1128692626953125,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05509471893310547,
+          "max_share": 0.06955432891845703,
+          "entropy": 2.660599261522293,
+          "top1_weight": 0.5869135223329067
+        },
+        {
+          "maxvio": 0.124359130859375,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05104827880859375,
+          "max_share": 0.07027244567871094,
+          "entropy": 2.6466796547174454,
+          "top1_weight": 0.5802661180496216
+        },
+        {
+          "maxvio": 0.1582794189453125,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05280113220214844,
+          "max_share": 0.07239246368408203,
+          "entropy": 2.604987382888794,
+          "top1_weight": 0.5922545455396175
+        },
+        {
+          "maxvio": 0.0964202880859375,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05695915222167969,
+          "max_share": 0.0685262680053711,
+          "entropy": 2.5763973891735077,
+          "top1_weight": 0.5948028117418289
+        },
+        {
+          "maxvio": 0.0932159423828125,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.057048797607421875,
+          "max_share": 0.06832599639892578,
+          "entropy": 2.539478287100792,
+          "top1_weight": 0.5965417735278606
+        },
+        {
+          "maxvio": 0.1413116455078125,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05624866485595703,
+          "max_share": 0.07133197784423828,
+          "entropy": 2.515084534883499,
+          "top1_weight": 0.6069852076470852
+        },
+        {
+          "maxvio": 0.07208251953125,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.053689002990722656,
+          "max_share": 0.06700515747070312,
+          "entropy": 2.4670528918504715,
+          "top1_weight": 0.623087115585804
+        }
+      ],
+      "routing_val_end_step": 12200,
+      "persistently_starved_experts_last_quarter": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "stage2_moe_aux": {
+      "label": "upcycled MoE, bias + aux loss 0.01 (fallback)",
+      "val_step0_after_conversion": 1.749631717801094,
+      "conversion_jump": 0.1268877610564232,
+      "first_eval_at_or_below_pre_conversion": {
+        "step": 7000,
+        "steps_after_conversion": 900,
+        "tokens_after_conversion_M": 29.4912,
+        "val_loss": 1.6194582283496857,
+        "dense_control_val_same_step": 1.595680221915245
+      },
+      "val_end": 1.4929414987564087,
+      "step0_controls": {
+        "dense_checkpoint": 1.6227439567446709,
+        "upcycled_moe": 1.749631717801094,
+        "moe_random_routed_experts": 3.914119079709053,
+        "moe_random_all_experts": 11.022241830825806,
+        "fully_random_moe": 9.069505274295807,
+        "uniform_baseline_ln_vocab": 9.010913347279288
+      },
+      "minus_dense_at_matched_evals": {
+        "6100": 0.1269,
+        "6200": 0.0495,
+        "6600": 0.0315,
+        "7000": 0.0238,
+        "8000": 0.0107,
+        "9000": 0.0023,
+        "10000": -0.0044,
+        "11000": -0.0074,
+        "12000": -0.0108,
+        "12200": -0.0114
+      },
+      "first_eval_below_dense_control": 9500,
+      "below_dense_control_from_step_onwards": 9500,
+      "end_below_pre_conversion": true,
+      "end_minus_pre_conversion": -0.12980245798826218,
+      "end_minus_dense_control": -0.011401347815990448,
+      "routing_val_step0": [
+        {
+          "maxvio": 0.59429931640625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.032692909240722656,
+          "max_share": 0.09964370727539062,
+          "entropy": 2.7437161654233932,
+          "top1_weight": 0.5287108905613422
+        },
+        {
+          "maxvio": 0.7127838134765625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.02378082275390625,
+          "max_share": 0.10704898834228516,
+          "entropy": 2.7458078116178513,
+          "top1_weight": 0.5281819142401218
+        },
+        {
+          "maxvio": 0.8956146240234375,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.024918556213378906,
+          "max_share": 0.11847591400146484,
+          "entropy": 2.737053021788597,
+          "top1_weight": 0.5324497073888779
+        },
+        {
+          "maxvio": 1.0039520263671875,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.028179168701171875,
+          "max_share": 0.12524700164794922,
+          "entropy": 2.7275932878255844,
+          "top1_weight": 0.5369583442807198
+        },
+        {
+          "maxvio": 0.8354949951171875,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.03054523468017578,
+          "max_share": 0.11471843719482422,
+          "entropy": 2.7178769558668137,
+          "top1_weight": 0.5399609431624413
+        },
+        {
+          "maxvio": 1.5131378173828125,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.026094436645507812,
+          "max_share": 0.15707111358642578,
+          "entropy": 2.708762049674988,
+          "top1_weight": 0.5438595563173294
+        },
+        {
+          "maxvio": 0.6248779296875,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.041108131408691406,
+          "max_share": 0.10155487060546875,
+          "entropy": 2.699482560157776,
+          "top1_weight": 0.5467604212462902
+        },
+        {
+          "maxvio": 0.443023681640625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.04180622100830078,
+          "max_share": 0.09018898010253906,
+          "entropy": 2.698023110628128,
+          "top1_weight": 0.547168429940939
+        }
+      ],
+      "routing_val_end": [
+        {
+          "maxvio": 0.095947265625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.051726341247558594,
+          "max_share": 0.0684967041015625,
+          "entropy": 2.6721970587968826,
+          "top1_weight": 0.5857446864247322
+        },
+        {
+          "maxvio": 0.108306884765625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.056807518005371094,
+          "max_share": 0.06926918029785156,
+          "entropy": 2.661300241947174,
+          "top1_weight": 0.5852352604269981
+        },
+        {
+          "maxvio": 0.12127685546875,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05425262451171875,
+          "max_share": 0.07007980346679688,
+          "entropy": 2.6429042667150497,
+          "top1_weight": 0.5863494277000427
+        },
+        {
+          "maxvio": 0.171051025390625,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.049816131591796875,
+          "max_share": 0.07319068908691406,
+          "entropy": 2.6079895198345184,
+          "top1_weight": 0.5895712897181511
+        },
+        {
+          "maxvio": 0.0755462646484375,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05794334411621094,
+          "max_share": 0.06722164154052734,
+          "entropy": 2.579214945435524,
+          "top1_weight": 0.5963289067149162
+        },
+        {
+          "maxvio": 0.07568359375,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05700206756591797,
+          "max_share": 0.067230224609375,
+          "entropy": 2.54512482881546,
+          "top1_weight": 0.5968349128961563
+        },
+        {
+          "maxvio": 0.0824432373046875,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05718803405761719,
+          "max_share": 0.06765270233154297,
+          "entropy": 2.5160419940948486,
+          "top1_weight": 0.6044152267277241
+        },
+        {
+          "maxvio": 0.1227264404296875,
+          "dead_zero": 0,
+          "dead_lt10pct": 0,
+          "min_share": 0.05735301971435547,
+          "max_share": 0.07017040252685547,
+          "entropy": 2.470563381910324,
+          "top1_weight": 0.6201393380761147
+        }
+      ],
+      "routing_val_end_step": 12200,
+      "persistently_starved_experts_last_quarter": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "perf": {
+    "stage1_dense": {
+      "tok_s": 175523.68277825852,
+      "peak_gib": 7.948719024658203
+    },
+    "stage2_dense": {
+      "tok_s": 175987.48963331018,
+      "peak_gib": 8.010205745697021
+    },
+    "stage2_moe": {
+      "tok_s": 86296.32108879663,
+      "peak_gib": 10.931614398956299
+    },
+    "stage2_moe_aux": {
+      "tok_s": 88960.30057150003,
+      "peak_gib": 10.95328140258789
+    }
+  }
+}

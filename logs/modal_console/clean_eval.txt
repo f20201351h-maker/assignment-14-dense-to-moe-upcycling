@@ -1,0 +1,64 @@
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<python>\site-packages\modal\_utils\async_utils.py:43: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+✓ Initialized. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-Dglrl3lFa7xYYs8awSTKM3
+✓ Created objects.
+├── ✓ Uploaded .\modal_app.py
+├── ✓ Uploaded .\src
+├── ✓ Created Function prep_data.
+├── ✓ Created Function bench_a10g.
+├── ✓ Created Function bench_l40s.
+├── ✓ Created Function train.
+├── ✓ Created Function overlap_check.
+├── ✓ Created Function build_clean_sets.
+└── ✓ Created Function clean_eval_gpu.
+{
+  "sets": {
+    "clean": {
+      "stories": 2697,
+      "tokens_predicted": 524288
+    },
+    "dup": {
+      "stories": 2457,
+      "tokens_predicted": 524288
+    }
+  },
+  "val_loss": {
+    "dense_before_conversion": {
+      "step": 6100,
+      "fixed": 1.6227439567446709,
+      "clean": 1.6251366958022118,
+      "dup": 1.6186240389943123
+    },
+    "moe_step0": {
+      "step": 6100,
+      "fixed": 1.7495338842272758,
+      "clean": 1.750924900174141,
+      "dup": 1.7469242438673973
+    },
+    "stage2_dense_end": {
+      "step": 12200,
+      "fixed": 1.5043428465723991,
+      "clean": 1.5090197250247002,
+      "dup": 1.4958873242139816
+    },
+    "stage2_moe_end": {
+      "step": 12200,
+      "fixed": 1.4925057739019394,
+      "clean": 1.497486837208271,
+      "dup": 1.4819098860025406
+    },
+    "stage2_moe_aux_end": {
+      "step": 12200,
+      "fixed": 1.4929516091942787,
+      "clean": 1.4983683973550797,
+      "dup": 1.4819991886615753
+    },
+    "uniform_baseline": 9.010913347279288
+  }
+}
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+https://modal.com/apps/WORKSPACE/main/ap-Dglrl3lFa7xYYs8awSTKM3

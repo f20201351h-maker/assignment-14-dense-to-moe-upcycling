@@ -1,0 +1,24 @@
+{
+  "vocab_size": 8192,
+  "eot_id": 0,
+  "ctx": 256,
+  "train_docs": 2119489,
+  "train_tokens": 466735154,
+  "val_docs": 21990,
+  "val_tokens": 4691062,
+  "val_fixed_windows": 2048,
+  "val_fixed_tokens_predicted": 524288,
+  "tokens_per_train_doc": 220.21117071143092,
+  "tokenizer_train_seconds": 73.6,
+  "total_seconds": 230.6,
+  "sha256": {
+    "tokenizer.json": "1be2d580e428c31cf90155244c38d2abaf90dc9d878454da80965cf63fbb5fba",
+    "train.bin": "d994c685b1d5519d391e565fc7c2d4317bcb9dec16f5a8a32c74cc2cb4d1a9f4",
+    "val_fixed.bin": "3e3879e7d1c172cb837d01008b823dc9fb624b6b8f5c6776330fac77647de165"
+  },
+  "source": "roneneldan/TinyStories (HF default config: train / validation splits)",
+  "hf_rows": {
+    "train": 2119719,
+    "validation": 21990
+  }
+}
